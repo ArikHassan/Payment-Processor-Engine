@@ -5,6 +5,7 @@ This application simulates a backend system where a customer's
 payment is processed.
 
 ### Problem Description
+This system is designed to be a component of a larger application.
 
 ### Flow of operations
 - System receives a payment request from the customer
