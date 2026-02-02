@@ -5,4 +5,8 @@ public class Address {
     private String city;
     private String province;
     private String country;
+
+    Address(String streetAddress, String city, String province, String country){
+
+    }
 }

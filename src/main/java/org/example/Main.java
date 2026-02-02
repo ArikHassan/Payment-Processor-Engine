@@ -1,21 +1,29 @@
 package org.example;
 
 
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+
+    // SAMPLE DATA
+    Address address1 = new Address("138 Costary Drive", "Calgary", "Alberta", "Canada");
+    Customer customer1 = new Customer("Marty Bird", "marty@outlook.com", address1);
+
+    // CREATE SCANNER
+    public static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        System.out.println("************************");
-        System.out.println("Payment Processor Engine");
-        System.out.println("************************");
 
-        System.out.println();
-        System.out.println("Please select one of the payment methods below");
+        // create a payment processor obj
+        PaymentProcessor paymentProcessor = new PaymentProcessor();
 
-        // Print all the constants/values of Enum: PaymentType
-        for (PaymentType paymentType : PaymentType.values()) {
-            System.out.println(paymentType);
-        }
+        // SHOW MENU
+        paymentProcessor.displayMenu();
+
+        // GET MENU CHOICE
+        paymentProcessor.getMenuChoice(scanner);
 
     }
 }
