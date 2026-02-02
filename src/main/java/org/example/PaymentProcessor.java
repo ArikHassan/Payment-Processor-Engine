@@ -3,16 +3,11 @@ package org.example;
 import java.util.Scanner;
 
 public class PaymentProcessor {
-    public void PaymentProcessor(){
+
+    // CONSTRUCTOR
+    PaymentProcessor(){
 
     };
-
-    public void displayMenu(){
-        System.out.println("************************");
-        System.out.println("Payment Processor Engine");
-        System.out.println("************************");
-        System.out.println();
-    }
 
     public PaymentType getMenuChoice(Scanner scanner){
         System.out.println("Please select one of the payment methods below");
@@ -38,17 +33,5 @@ public class PaymentProcessor {
             default -> {System.out.println("Invalid choice");}
         }
         return paymentType;
-    }
-
-    private void processCredit(){
-
-    }
-
-    private void processApplePay(){
-
-    }
-
-    private void processDebit(){
-
     }
 }
