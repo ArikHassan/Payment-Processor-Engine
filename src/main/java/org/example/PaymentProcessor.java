@@ -1,37 +1,22 @@
-package org.example;
+/* PAYMENT PROCESSOR Class
 
+    -This class is responsible for making sure the correct processor
+    is called for the payment type selected by the user
+
+    -Should receive an input telling it which payment processor to use
+*/
+package org.example;
 import java.util.Scanner;
 
 public class PaymentProcessor {
 
     // CONSTRUCTOR
     PaymentProcessor(){
-
     };
 
-    public PaymentType getMenuChoice(Scanner scanner){
-        System.out.println("Please select one of the payment methods below");
-
-        // Declare variables
-        int index = 1;
-        int userChoice = 0;
-        PaymentType paymentType = null;
-
-        // Print all the constants/values of Enum: PaymentType
-        for (PaymentType payment_Type : PaymentType.values()) {
-            System.out.printf("(%d) " + payment_Type + "\n", index);
-            index++;
-        }
-
-        // GET INPUT
-        userChoice = scanner.nextInt();
-
-        switch (userChoice) {
-            case 1 -> {paymentType = PaymentType.DEBIT;}
-            case 2 -> {paymentType = PaymentType.CREDIT;}
-            case 3 -> {paymentType =  PaymentType.APPLEPAY;}
-            default -> {System.out.println("Invalid choice");}
-        }
-        return paymentType;
+    public void process(Processor processor){
+        processor.processPayment();
     }
+
+
 }
