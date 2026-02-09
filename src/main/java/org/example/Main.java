@@ -13,9 +13,8 @@ public class Main {
     // CREATE SCANNER
     public static Scanner scanner = new Scanner(System.in);
 
-    // SAMPLE DATA
-    Address address1 = new Address("138 Costary Drive", "Calgary", "Alberta", "Canada");
-    Customer customer1 = new Customer("Marty Bird", "marty@outlook.com", address1);
+    // CREATE TEST DATA SOURCE OBJ
+    TestDataSource testDataSource = new TestDataSource();
 
     // MAIN METHOD
     public static void main(String[] args) {
