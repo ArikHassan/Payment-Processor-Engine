@@ -14,8 +14,8 @@ public class PaymentProcessor {
     PaymentProcessor(){
     };
 
-    public void process(Processor processor){
-        processor.processPayment();
+    public void process(Processor processor, Payment payment){
+        processor.processPayment(payment);
     }
 
 

@@ -4,9 +4,9 @@ import java.util.*;
 
 public class TestDataSource {
 
-    List<Customer> customers = new ArrayList<>();
-    List<Address> addresses = new ArrayList<>();
-    List<Payment> payments = new ArrayList<>();
+    ArrayList<Customer> customers = new ArrayList<>();
+    ArrayList<Address> addresses = new ArrayList<>();
+    ArrayList<Payment> payments = new ArrayList<>();
 
     TestDataSource(){
         // 10 Sample Addresses

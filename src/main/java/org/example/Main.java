@@ -1,10 +1,8 @@
 package org.example;
 
-
+import java.util.ArrayList;
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
     // CREATE HELPER OBJECT
@@ -14,35 +12,47 @@ public class Main {
     public static Scanner scanner = new Scanner(System.in);
 
     // CREATE TEST DATA SOURCE OBJ
-    TestDataSource testDataSource = new TestDataSource();
+    public static TestDataSource testDataSource = new TestDataSource();
 
     // MAIN METHOD
     public static void main(String[] args) {
-
+        helper.displayStart();
         helper.displayMenu();
 
         // CREATE A PAYMENT PROCESSOR OBJ
         PaymentProcessor paymentProcessor = new PaymentProcessor();
 
-        // CREATE A PROCESSOR OBJ
-        Processor processor = null;
+        // GET SAMPLE PAYMENT REQUESTS
+        ArrayList<Payment> paymentRequests = new ArrayList<Payment>();
+        paymentRequests = testDataSource.payments;
 
-        // GET MENU CHOICE
-        PaymentType paymentType = null; // not selected yet
+        System.out.println("Pending payment count: " + paymentRequests.size());
 
-        while (paymentType == null) {
-            paymentType = helper.getMenuChoice(scanner);
+        // Declare Required Variables
+        Payment currentPayment = null;
+        Processor currentProcessor = null;
+
+        while (paymentRequests.size() > 0){
+            // Get reference to first payment request (FIFO)
+            currentPayment = paymentRequests.getFirst();
+
+            //ASSIGN THE APPROPRIATE PROCESSOR TO USE
+            currentProcessor = helper.getProcessor(currentPayment.getPaymentType());
+
+            // Process the current payment using appropriate processor
+            paymentProcessor.process(currentProcessor, currentPayment);
+
+            // Remove the processed payment from the list
+            paymentRequests.removeFirst();
+
+            System.out.println("# of pending payments remaining: " + paymentRequests.size() + "\n" +
+                               "-------------------------------------\n");
+
         }
-        // IF SELECTION IS A VALID CHOICE
-        if (paymentType != null) {
-            System.out.println("You chose: " + paymentType);
-        }
 
-        //ASSIGN THE APPROPRIATE PROCESSOR TO USE
-        processor = helper.getProcessor(paymentType);
-
-        // TELL PAYMENTPROCESSOR TO PROCESS PAYMENT USING THE PASSED PROCESSOR
-        paymentProcessor.process(processor);
+        System.out.println();
+        System.out.println("THERE ARE CURRENTLY NO PENDING PAYMENTS\n" +
+                            "******************************");
 
     }
 }
