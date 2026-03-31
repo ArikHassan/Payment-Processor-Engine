@@ -33,7 +33,7 @@ public class MainHelper {
             case 3 -> {paymentType =  PaymentType.APPLEPAY;}
             default -> {
                 System.out.println("Invalid choice");
-                paymentType = null;
+                paymentType = null; // return null when choice is invalid
             }
         }
         return paymentType;

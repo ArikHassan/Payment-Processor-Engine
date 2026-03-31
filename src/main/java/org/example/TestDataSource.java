@@ -6,7 +6,11 @@ public class TestDataSource {
 
     List<Customer> customers = new ArrayList<>();
     List<Address> addresses = new ArrayList<>();
-    List<Payment> payments = new ArrayList<>();
+    public List<Payment> payments = new ArrayList<>();
+
+    public List<Payment> getPayments(){
+        return this.payments;
+    }
 
     TestDataSource(){
         // 10 Sample Addresses

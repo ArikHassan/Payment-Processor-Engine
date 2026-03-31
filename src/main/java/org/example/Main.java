@@ -1,8 +1,6 @@
 package org.example;
 
-
 import java.util.Scanner;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -14,7 +12,7 @@ public class Main {
     public static Scanner scanner = new Scanner(System.in);
 
     // CREATE TEST DATA SOURCE OBJ
-    TestDataSource testDataSource = new TestDataSource();
+    static TestDataSource dataSource = new TestDataSource();
 
     // MAIN METHOD
     public static void main(String[] args) {
@@ -24,25 +22,23 @@ public class Main {
         // CREATE A PAYMENT PROCESSOR OBJ
         PaymentProcessor paymentProcessor = new PaymentProcessor();
 
-        // CREATE A PROCESSOR OBJ
+        // CREATE A null PROCESSOR OBJ (to be assigned later)
         Processor processor = null;
 
-        // GET MENU CHOICE
         PaymentType paymentType = null; // not selected yet
+        PaymentResult paymentResult;
 
-        while (paymentType == null) {
-            paymentType = helper.getMenuChoice(scanner);
+        System.out.println("Engine will now begin processing incoming payments...");
+
+        for (Payment incomingPayment : dataSource.payments) {
+            System.out.println("-----------------------------------");
+            // TELL PAYMENTPROCESSOR TO PROCESS INCOMING PAYMENT, STORE THE RETURNED RESULT
+            paymentResult = paymentProcessor.process(incomingPayment);
+
+            System.out.println("Payment ID: " + paymentResult.getPaymentId().toString());
+            System.out.println("Payment Status: " + paymentResult.getStatus());
+            System.out.println(paymentResult.getDescription());
+
         }
-        // IF SELECTION IS A VALID CHOICE
-        if (paymentType != null) {
-            System.out.println("You chose: " + paymentType);
-        }
-
-        //ASSIGN THE APPROPRIATE PROCESSOR TO USE
-        processor = helper.getProcessor(paymentType);
-
-        // TELL PAYMENTPROCESSOR TO PROCESS PAYMENT USING THE PASSED PROCESSOR
-        paymentProcessor.process(processor);
-
     }
 }

@@ -9,10 +9,19 @@ public class Payment {
     private Currency currency;
     private PaymentType paymentType;
 
-    Payment(double amount, Customer customer, Currency currency, PaymentType paymentType){
+    public Payment(double amount, Customer customer, Currency currency, PaymentType paymentType){
+        this.id = UUID.randomUUID();
         this.amount = amount;
         this.customer = customer;
         this.currency = currency;
         this.paymentType = paymentType;
+    }
+
+    public PaymentType getPaymentType() {
+        return paymentType;
+    }
+
+    public UUID getId() {
+        return id;
     }
 }
