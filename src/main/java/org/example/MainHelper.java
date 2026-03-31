@@ -3,6 +3,13 @@ package org.example;
 import java.util.Scanner;
 
 public class MainHelper {
+
+    public void displayStart(){
+        System.out.println("Starting Payment Processor Engine...");
+        System.out.println("************************************");
+        System.out.println();
+    }
+
     public void displayMenu(){
         System.out.println("************************");
         System.out.println("Payment Processor Engine");
