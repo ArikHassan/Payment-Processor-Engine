@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aaebafa5-9787-4cad-86c1-94bba05686a9" name="Changes" comment="Payment Result class integrated + User Interaction removed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AccountType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BankService.java" afterDir="false" />
+    <list default="true" id="aaebafa5-9787-4cad-86c1-94bba05686a9" name="Changes" comment="Bank Service Class added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/BankAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Merchant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PaymentStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PaymentStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BankService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,7 +84,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774925022365</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Bank Service Class added">
+      <option name="closed" value="true" />
+      <created>1775453365178</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1775453365178</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +111,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Payment Result class integrated + User Interaction removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Payment Result class integrated + User Interaction removed" />
+    <MESSAGE value="Bank Service Class added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bank Service Class added" />
   </component>
 </project>
