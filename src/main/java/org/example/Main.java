@@ -3,7 +3,7 @@ package org.example;
 import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class  Main {
 
     // CREATE HELPER OBJECT
     static MainHelper helper = new MainHelper();
@@ -22,10 +22,6 @@ public class Main {
         // CREATE A PAYMENT PROCESSOR OBJ
         PaymentProcessor paymentProcessor = new PaymentProcessor();
 
-        // CREATE A null PROCESSOR OBJ (to be assigned later)
-        Processor processor = null;
-
-        PaymentType paymentType = null; // not selected yet
         PaymentResult paymentResult;
 
         System.out.println("Engine will now begin processing incoming payments...");

@@ -3,5 +3,6 @@ package org.example;
 public enum PaymentStatus {
     SUCCESS,
     FAILED,
-    PENDING
+    PENDING,
+    DECLINED
 }

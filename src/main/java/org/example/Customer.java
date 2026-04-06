@@ -25,4 +25,16 @@ public class Customer {
         this.address = address;
     }
 
+    public UUID getId(){
+      return id;
+    };
+
+    public String getName(){
+        return name;
+    };
+
+    public String getEmailAddress(){
+        return emailAddress;
+    };
+
 }
