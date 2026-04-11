@@ -19,8 +19,11 @@ public class  Main {
 
         helper.displayMenu();
 
+        // CREATE BANK SERVICE --> assigning a list of customers
+        BankService bankService = new BankService(dataSource.customers);
+
         // CREATE A PAYMENT PROCESSOR OBJ
-        PaymentProcessor paymentProcessor = new PaymentProcessor();
+        PaymentProcessor paymentProcessor = new PaymentProcessor(bankService);
 
         PaymentResult paymentResult;
 
@@ -36,5 +39,7 @@ public class  Main {
             System.out.println(paymentResult.getDescription());
 
         }
+
+
     }
 }

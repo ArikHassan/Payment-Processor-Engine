@@ -2,6 +2,12 @@ package org.example;
 
 public class DebitProcessor implements Processor {
 
+    private BankService bankService;
+
+    DebitProcessor(BankService bankService){
+        this.bankService = bankService;
+    }
+
     // Implementation of the interface's abstract method
     public PaymentResult processPayment(Payment payment){
         System.out.println("DEBIT PROCESSING...");

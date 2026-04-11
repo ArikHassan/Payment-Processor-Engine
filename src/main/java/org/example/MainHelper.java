@@ -47,19 +47,19 @@ public class MainHelper {
     }
 
     // BUILDS THE APPROPRIATE PROCESSOR BASED ON PAYMENT TYPE & RETURNS IT
-    public Processor getProcessor(PaymentType paymentType){
+    public Processor getProcessor(PaymentType paymentType, BankService bankService){
 
         Processor processor = null;
 
         switch (paymentType){
             case CREDIT -> {
-                processor = new CreditProcessor();
+                processor = new CreditProcessor(bankService);
             }
             case DEBIT -> {
-                processor = new DebitProcessor();
+                processor = new DebitProcessor(bankService);
             }
             case APPLEPAY -> {
-                processor = new ApplePayProcessor();
+                processor = new ApplePayProcessor(bankService);
             }
         }
 

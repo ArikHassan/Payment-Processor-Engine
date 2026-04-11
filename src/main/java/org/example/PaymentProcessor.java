@@ -10,14 +10,19 @@ import static org.example.Main.helper;
 
 public class PaymentProcessor {
 
+    BankService bankService;
+
     // CONSTRUCTOR
-    PaymentProcessor(){
+    PaymentProcessor(BankService bankService){
+        this.bankService = bankService;
     };
 
+    // This method accepts a customers' payment + acquires correct processor + tells processor to process payment
+    // + returns the result from processor
     public PaymentResult process(Payment payment){
 
         //ASSIGN THE APPROPRIATE PROCESSOR TO USE
-        Processor processor = helper.getProcessor(payment.getPaymentType());
+        Processor processor = helper.getProcessor(payment.getPaymentType(), bankService);
 
         //PASS PAYMENT TO PROCESSOR FOR PROCESSING
         PaymentResult result = processor.processPayment(payment);
@@ -25,6 +30,5 @@ public class PaymentProcessor {
         // Return the result from processor
         return result;
     }
-
 
 }

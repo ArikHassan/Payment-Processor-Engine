@@ -6,6 +6,11 @@
 package org.example;
 
 public class CreditProcessor implements Processor {
+    private BankService bankService;
+
+    CreditProcessor(BankService bankService){
+        this.bankService = bankService;
+    }
 
     // Implementation of the interface's abstract method
     public PaymentResult processPayment(Payment payment){
