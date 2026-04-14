@@ -20,10 +20,13 @@ application. The program is divided into Classes to combine related
 data & the methods acting on that data. 
 
 ### Flow of operations
-- System receives a payment request from the customer
-- System validates the request
-- System processes the payment
-- System delegates the payment request to the customer's bank
-- The bank validates the request
-- The bank responds to the systems request
+- System receives incoming payment requests
+- System passes the payment to the payment processor to process
+- Payment processor sends payment object to the appropriate processor based on payment type
+- Processors relay the payment object to the bank service using designated methods for payment types
+- Bank service verifies payment, customer, & account data with their database
+    - Does this customer exist in our database?
+    - Does this customer have an active account status?
+    - Does this customer have sufficient funds / credit available for the transaction?
+- Bank service returns a PaymentResult reporting the authorisation status of payment
 

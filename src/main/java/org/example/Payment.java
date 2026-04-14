@@ -24,4 +24,12 @@ public class Payment {
     public UUID getId() {
         return id;
     }
+
+    public UUID getCustomerId(){
+        return customer.getId();
+    }
+
+    public double getAmount(){
+        return amount;
+    }
 }

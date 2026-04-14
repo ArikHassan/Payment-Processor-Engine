@@ -14,6 +14,10 @@ public class BankAccount {
         this.acctStatus = acctStatus;
     }
 
+    public void debit(double amount){
+        acctBalance -= amount;
+    }
+
     public double getacctBalance(){
         return acctBalance;
     };
@@ -24,5 +28,9 @@ public class BankAccount {
 
     public AccountType getAcctType(){
         return acctType;
+    }
+
+    public Customer getCustomer(){
+        return customer;
     }
 }

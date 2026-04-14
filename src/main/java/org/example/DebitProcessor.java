@@ -10,12 +10,11 @@ public class DebitProcessor implements Processor {
 
     // Implementation of the interface's abstract method
     public PaymentResult processPayment(Payment payment){
-        System.out.println("DEBIT PROCESSING...");
+        System.out.println("PROCESSING DEBIT PAYMENT ...");
 
-        // TODO PROCESSING LOGIC (PAYMENT IS CURRENTLY NOT BEING USED)
+        // Get authorization from bank service
+        PaymentResult paymentResult = bankService.authoriseDebit(payment);
 
-        // CREATE AND RETURN A PAYMENT RESULT OBJECT
-        PaymentResult paymentResult = new PaymentResult(payment.getId(), PaymentStatus.SUCCESS, "PAYMENT WAS SUCCESSFUL");
         return paymentResult;
     }
 }

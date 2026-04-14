@@ -4,13 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aaebafa5-9787-4cad-86c1-94bba05686a9" name="Changes" comment="Bank Account Class added + BankService modified">
+    <list default="true" id="aaebafa5-9787-4cad-86c1-94bba05686a9" name="Changes" comment="BankService now passed Main-PaymentProcessor-Processor. Processor constructors added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ApplePayProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ApplePayProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BankAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BankService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CreditProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CreditProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MainHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MainHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PaymentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PaymentProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DebitProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DebitProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/ApplePayProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/ApplePayProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/CreditProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/CreditProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/DebitProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/DebitProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Merchant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Payment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/PaymentProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/PaymentProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/PaymentStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/PaymentStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Processor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Processor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/TestDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/TestDataSource.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,19 +62,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -103,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775454726965</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="BankService now passed Main-PaymentProcessor-Processor. Processor constructors added">
+      <option name="closed" value="true" />
+      <created>1775913340552</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1775913340552</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +148,7 @@
     <MESSAGE value="Payment Result class integrated + User Interaction removed" />
     <MESSAGE value="Bank Service Class added" />
     <MESSAGE value="Bank Account Class added + BankService modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bank Account Class added + BankService modified" />
+    <MESSAGE value="BankService now passed Main-PaymentProcessor-Processor. Processor constructors added" />
+    <option name="LAST_COMMIT_MESSAGE" value="BankService now passed Main-PaymentProcessor-Processor. Processor constructors added" />
   </component>
 </project>
