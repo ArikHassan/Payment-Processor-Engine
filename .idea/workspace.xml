@@ -4,26 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aaebafa5-9787-4cad-86c1-94bba05686a9" name="Changes" comment="BankService now passed Main-PaymentProcessor-Processor. Processor constructors added">
+    <list default="true" id="aaebafa5-9787-4cad-86c1-94bba05686a9" name="Changes" comment="updated Bank Service authorisePayment method - branched into 3 separate">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CardDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TokenizedCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ApplePayProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ApplePayProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BankAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BankService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CreditProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CreditProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DebitProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DebitProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/ApplePayProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/ApplePayProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/CreditProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/CreditProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/DebitProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/DebitProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Merchant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Payment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/PaymentProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/PaymentProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/PaymentStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/PaymentStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Processor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Processor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/TestDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/TestDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PaymentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PaymentProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/MainHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/MainHelper.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,18 +28,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ArikHassan"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ArikHassan&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ArikHassan/Payment-Processor-Engine.git",
-    "accountId": "69c0a909-cefa-4d7f-80e6-4db9b4ce488e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ArikHassan/Payment-Processor-Engine.git&quot;,
+    &quot;accountId&quot;: &quot;69c0a909-cefa-4d7f-80e6-4db9b4ce488e&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -74,7 +61,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -127,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775913340552</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="updated Bank Service authorisePayment method - branched into 3 separate">
+      <option name="closed" value="true" />
+      <created>1776199299934</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1776199299934</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +144,7 @@
     <MESSAGE value="Bank Service Class added" />
     <MESSAGE value="Bank Account Class added + BankService modified" />
     <MESSAGE value="BankService now passed Main-PaymentProcessor-Processor. Processor constructors added" />
-    <option name="LAST_COMMIT_MESSAGE" value="BankService now passed Main-PaymentProcessor-Processor. Processor constructors added" />
+    <MESSAGE value="updated Bank Service authorisePayment method - branched into 3 separate" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated Bank Service authorisePayment method - branched into 3 separate" />
   </component>
 </project>

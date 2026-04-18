@@ -20,6 +20,8 @@ public class BankService {
     }
 
     public PaymentResult authoriseDebit(Payment payment){
+
+        /*
         // Get account where Customer id matches account holders id
         BankAccount account = accounts.get(payment.getCustomerId());
 
@@ -39,7 +41,7 @@ public class BankService {
 
         // Debit the amount from account
         account.debit(payment.getAmount());
-
+*/
         // Return successful payment result
         return new PaymentResult(payment.getCustomerId(), PaymentStatus.SUCCESS, "Payment is authorised");
     }
