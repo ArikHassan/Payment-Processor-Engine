@@ -4,13 +4,18 @@ import java.util.*;
 
 public class TestDataSource {
 
-    List<Customer> customers = new ArrayList<>();
-    List<Address> addresses = new ArrayList<>();
+    // LIST OF CUSTOMERS
+    public List<Customer> customers = new ArrayList<>();
+
+    // LIST OF ADDRESSES OF CUSTOMERS
+    public List<Address> addresses = new ArrayList<>();
+
+    // LIST OF PAYMENTS TO PROCESS
     public List<Payment> payments = new ArrayList<>();
 
-    public List<Payment> getPayments(){
-        return this.payments;
-    }
+    // LIST OF RAW CARD DATA
+    public List<CardDetails> cards = new ArrayList<>();
+
 
     TestDataSource(){
         // 10 Sample Addresses
@@ -65,7 +70,40 @@ public class TestDataSource {
         for (Payment payment : payments) {
             this.payments.add(payment);
         }
+
+        CardDetails[] cards = {
+                new CardDetails("4111 1111 1111 1001", 12, 2028, "123", "Marty Bird", "VISA"),
+                new CardDetails("5500 0000 0000 2002", 11, 2027, "456", "Sarah Ahmed", "MASTERCARD"),
+                new CardDetails("4111 1111 1111 3003", 10, 2029, "789", "Daniel Chen", "VISA"),
+                new CardDetails("3400 0000 0000 400", 9, 2026, "321", "Ayesha Khan", "AMEX"),
+                new CardDetails("5500 0000 0000 5005", 8, 2028, "654", "Michael Thompson", "MASTERCARD"),
+                new CardDetails("4111 1111 1111 6006", 7, 2027, "987", "Fatima Ali", "VISA"),
+                new CardDetails("5500 0000 0000 7007", 6, 2029, "111", "James Wilson", "MASTERCARD"),
+                new CardDetails("4111 1111 1111 8008", 5, 2026, "222", "Omar Hassan", "VISA"),
+                new CardDetails("3400 0000 0000 900", 4, 2028, "333", "Emily Carter", "AMEX"),
+                new CardDetails("5500 0000 0000 1010", 3, 2027, "444", "Noah Patel", "MASTERCARD")
+
+        };
+
+        for (CardDetails card : cards){
+            this.cards.add(card);
+        }
     }
+
+    // GETTERS
+
+    public List<CardDetails> getCards(){
+        return this.cards;
+    }
+
+    public List<Customer> getCustomers(){
+        return this.customers;
+    }
+
+    public List<Payment> getPayments(){
+        return this.payments;
+    }
+    /*--------------------------------------*/
 
 
 }

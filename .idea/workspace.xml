@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aaebafa5-9787-4cad-86c1-94bba05686a9" name="Changes" comment="updated Bank Service authorisePayment method - branched into 3 separate">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CardDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TokenizedCard.java" afterDir="false" />
+    <list default="true" id="aaebafa5-9787-4cad-86c1-94bba05686a9" name="Changes" comment="Added use of Card Details - Payment Processor &amp; Bank Service updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BankService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BankService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PaymentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PaymentProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/MainHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/MainHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CardDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CardDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TestDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TestDataSource.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776199299934</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added use of Card Details - Payment Processor &amp; Bank Service updated">
+      <option name="closed" value="true" />
+      <created>1776555825115</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1776555825115</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +150,7 @@
     <MESSAGE value="Bank Account Class added + BankService modified" />
     <MESSAGE value="BankService now passed Main-PaymentProcessor-Processor. Processor constructors added" />
     <MESSAGE value="updated Bank Service authorisePayment method - branched into 3 separate" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated Bank Service authorisePayment method - branched into 3 separate" />
+    <MESSAGE value="Added use of Card Details - Payment Processor &amp; Bank Service updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added use of Card Details - Payment Processor &amp; Bank Service updated" />
   </component>
 </project>
