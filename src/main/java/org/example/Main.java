@@ -8,9 +8,6 @@ public class  Main {
     // CREATE HELPER OBJECT
     static MainHelper helper = new MainHelper();
 
-    // CREATE SCANNER
-    public static Scanner scanner = new Scanner(System.in);
-
     // CREATE TEST DATA SOURCE OBJ
     static TestDataSource dataSource = new TestDataSource();
 

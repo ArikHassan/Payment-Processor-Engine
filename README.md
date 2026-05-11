@@ -20,13 +20,17 @@ application. The program is divided into Classes to combine related
 data & the methods acting on that data. 
 
 ### Flow of operations
-- System receives incoming payment requests
-- System passes the payment to the payment processor to process
-- Payment processor sends payment object to the appropriate processor based on payment type
-- Processors relay the payment object to the bank service using designated methods for payment types
-- Bank service verifies payment, customer, & account data with their database
-    - Does this customer exist in our database?
-    - Does this customer have an active account status?
-    - Does this customer have sufficient funds / credit available for the transaction?
-- Bank service returns a PaymentResult reporting the authorisation status of payment
-
+- The main class configures the application variables before the program starts
+- The system receives incoming payment requests from an in-memory source (simulates external sources: online retailers/merchants)
+- System passes each payment to the payment processor to begin processing
+- Payment processor gets the appropriate processor from MainHelper based on payment type
+- Payment processor passes the payment object to the processor to process it
+- The processor sends the payment to the bank service to get authorization
+- - Bank service verifies payment, customer, & account data with their database
+  - Does this customer exist in our database?
+  - Does this customer have an active account status?
+  - Does this customer have sufficient funds / credit available for the transaction?
+- Bank service sends back a PaymentResult object with a PaymentStatus: SUCCESS, FAILED, PENDING, or DECLINED
+- Processor sends back PaymentResult object to the PaymentProcessor
+- Payment Processor sends PaymentResult object back to Main
+- Main displays contents of PaymentResult object
