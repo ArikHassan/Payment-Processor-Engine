@@ -26,10 +26,10 @@ data & the methods acting on that data.
 - Payment processor gets the appropriate processor from MainHelper based on payment type
 - Payment processor passes the payment object to the processor to process it
 - The processor sends the payment to the bank service to get authorization
-- - Bank service verifies payment, customer, & account data with their database
-  - Does this customer exist in our database?
-  - Does this customer have an active account status?
-  - Does this customer have sufficient funds / credit available for the transaction?
+- Bank service verifies payment, customer, & account data with their database
+    - Does this customer exist in our database?
+    - Does this customer have an active account status?
+    - Does this customer have sufficient funds / credit available for the transaction?
 - Bank service sends back a PaymentResult object with a PaymentStatus: SUCCESS, FAILED, PENDING, or DECLINED
 - Processor sends back PaymentResult object to the PaymentProcessor
 - Payment Processor sends PaymentResult object back to Main
