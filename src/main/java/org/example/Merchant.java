@@ -14,6 +14,6 @@ public class Merchant {
     }
 
     public UUID getCardToken(UUID customerId) {
-        return savedCards.get(customerId).token;
+        return savedCards.get(customerId).id;
     }
 }

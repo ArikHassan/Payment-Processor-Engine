@@ -26,31 +26,47 @@ public class PaymentProcessor {
         this.bankService = bankService;
     };
 
-    // FUNCTION TO ADD PAYMENT CARDS
+    // FUNCTION TO ADD NEW PAYMENT CARDS + return tokenized card
     public TokenizedCard addPaymentCard(CardDetails newCard){
-        // Generate a key/token for this card
-        UUID token = UUID.randomUUID();
+
+        // 1. Store the new Card
+        // Generate an id for this card
+        UUID paymentCardId = UUID.randomUUID();
 
         // Store card details in the vault
-        paymentCards.put(token, newCard);
+        paymentCards.put(paymentCardId, newCard);
 
+        // 2. Tokenize & return token of new card
+        TokenizedCard cardToken = tokenizeCard(newCard, paymentCardId);
+
+        return cardToken; // return token back to the merchant --> to be used when initiating payment requests
+    }
+
+    public TokenizedCard tokenizeCard(CardDetails card, UUID tokenID){
         // Initialize the tokenized card to return
         TokenizedCard tokenizedCard = new TokenizedCard();
-        tokenizedCard.token = token;
-        // Omit dashes or spaces
-        String digitsOnly = newCard.cardNumber.replaceAll("\\D", "");
+
+        // Assign ID
+        tokenizedCard.id = tokenID;
+
+        // Omit dashes or spaces from card #
+        String digitsOnly = card.cardNumber.replaceAll("\\D", "");
+
+        // Assign last 4 digits
         tokenizedCard.last4Digits = digitsOnly.substring(digitsOnly.length() - 4);
 
-        tokenizedCard.cardNetwork = newCard.cardNetwork;
+        // Assign card network
+        tokenizedCard.cardNetwork = card.cardNetwork;
 
-        return tokenizedCard; // return token back to the merchant --> to be used when initiating payment requests
+        // Return token
+        return tokenizedCard;
     }
 
     // This method accepts a customers' payment + acquires correct processor + tells processor to process payment
     // + returns the result from processor
     public PaymentResult process(Payment payment){
 
-        //ASSIGN THE APPROPRIATE PROCESSOR TO USE
+        //GET THE APPROPRIATE PROCESSOR TO USE
         Processor processor = helper.getProcessor(payment.getPaymentType(), bankService);
 
         //PASS PAYMENT TO PROCESSOR FOR PROCESSING

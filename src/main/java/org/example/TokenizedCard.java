@@ -3,7 +3,7 @@ package org.example;
 import java.util.UUID;
 
 public class TokenizedCard {
-    UUID token;
+    UUID id;
     String last4Digits;
     String cardNetwork;
 }
