@@ -13,11 +13,11 @@ public class CreditProcessor implements Processor {
     }
 
     // Implementation of the interface's abstract method
-    public PaymentResult processPayment(Payment payment){
+    public PaymentResult processPayment(PaymentRequest paymentRequest){
         System.out.println("PROCESSING CREDIT PAYMENT...");
 
         // Get authorization from bank service
-        PaymentResult paymentResult = bankService.authoriseCredit(payment);
+        PaymentResult paymentResult = bankService.authoriseCredit(paymentRequest);
 
         return paymentResult;
     }

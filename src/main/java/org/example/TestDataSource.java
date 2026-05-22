@@ -11,7 +11,7 @@ public class TestDataSource {
     public List<Address> addresses = new ArrayList<>();
 
     // LIST OF PAYMENTS TO PROCESS
-    public List<Payment> payments = new ArrayList<>();
+    public List<PaymentRequest> paymentRequests = new ArrayList<>();
 
     // LIST OF RAW CARD DATA
     public List<CardDetails> cards = new ArrayList<>();
@@ -54,21 +54,21 @@ public class TestDataSource {
         }
 
         // 10 Sample Payments
-        Payment[] payments = {
-                new Payment(120.00, customers[0], Currency.CAD, PaymentType.CREDIT),
-                new Payment(75.50, customers[1], Currency.CAD, PaymentType.DEBIT),
-                new Payment(240.99, customers[2], Currency.CAD, PaymentType.CREDIT),
-                new Payment(19.99, customers[3], Currency.CAD, PaymentType.APPLEPAY),
-                new Payment(560.00, customers[4], Currency.CAD, PaymentType.CREDIT),
-                new Payment(89.25, customers[5], Currency.CAD, PaymentType.DEBIT),
-                new Payment(1500.00, customers[6], Currency.CAD, PaymentType.CREDIT),
-                new Payment(45.00, customers[7], Currency.CAD, PaymentType.APPLEPAY),
-                new Payment(310.75, customers[8], Currency.CAD, PaymentType.DEBIT),
-                new Payment(999.99, customers[9], Currency.CAD, PaymentType.CREDIT)
+        PaymentRequest[] paymentsRequests = {
+                new PaymentRequest(120.00, Currency.CAD, PaymentType.CREDIT),
+                new PaymentRequest(75.50, Currency.CAD, PaymentType.DEBIT),
+                new PaymentRequest(240.99, Currency.CAD, PaymentType.CREDIT),
+                new PaymentRequest(19.99, Currency.CAD, PaymentType.APPLEPAY),
+                new PaymentRequest(560.00, Currency.CAD, PaymentType.CREDIT),
+                new PaymentRequest(89.25, Currency.CAD, PaymentType.DEBIT),
+                new PaymentRequest(1500.00, Currency.CAD, PaymentType.CREDIT),
+                new PaymentRequest(45.00, Currency.CAD, PaymentType.APPLEPAY),
+                new PaymentRequest(310.75, Currency.CAD, PaymentType.DEBIT),
+                new PaymentRequest(999.99, Currency.CAD, PaymentType.CREDIT)
         };
 
-        for (Payment payment : payments) {
-            this.payments.add(payment);
+        for (PaymentRequest paymentRequest : paymentsRequests) {
+            this.paymentRequests.add(paymentRequest);
         }
 
         CardDetails[] cards = {
@@ -100,8 +100,8 @@ public class TestDataSource {
         return this.customers;
     }
 
-    public List<Payment> getPayments(){
-        return this.payments;
+    public List<PaymentRequest> getPayments(){
+        return this.paymentRequests;
     }
     /*--------------------------------------*/
 

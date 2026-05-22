@@ -19,7 +19,7 @@ public class BankService {
         }
     }
 
-    public PaymentResult authoriseDebit(Payment payment){
+    public PaymentResult authoriseDebit(PaymentRequest paymentRequest){
 
         /*
         // Get account where Customer id matches account holders id
@@ -43,16 +43,16 @@ public class BankService {
         account.debit(payment.getAmount());
 */
         // Return successful payment result
-        return new PaymentResult(payment.getCustomerId(), PaymentStatus.SUCCESS, "Payment is authorised");
+        return new PaymentResult(paymentRequest.getId(), PaymentStatus.SUCCESS, "Payment is authorised");
     }
 
-    public PaymentResult authoriseCredit(Payment payment){
+    public PaymentResult authoriseCredit(PaymentRequest payment){
 // TEMP RETURN statement
         return new PaymentResult(payment.getId(), PaymentStatus.SUCCESS, "Payment is authorised");
     }
 
-    public PaymentResult authoriseApplePay(Payment payment){
+    public PaymentResult authoriseApplePay(PaymentRequest paymentRequest){
 // TEMP RETURN statement
-        return new PaymentResult(payment.getId(), PaymentStatus.SUCCESS, "Payment is authorised");
+        return new PaymentResult(paymentRequest.getId(), PaymentStatus.SUCCESS, "Payment is authorised");
     }
 }

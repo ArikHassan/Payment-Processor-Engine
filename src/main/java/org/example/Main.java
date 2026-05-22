@@ -26,10 +26,10 @@ public class  Main {
 
         System.out.println("Engine will now begin processing incoming payments...");
 
-        for (Payment incomingPayment : dataSource.payments) {
+        for (PaymentRequest incomingPaymentRequests : dataSource.paymentRequests) {
             System.out.println("-----------------------------------");
             // TELL PAYMENTPROCESSOR TO PROCESS INCOMING PAYMENT, STORE THE RETURNED RESULT
-            paymentResult = paymentProcessor.process(incomingPayment);
+            paymentResult = paymentProcessor.process(incomingPaymentRequests);
 
             System.out.println("Payment ID: " + paymentResult.getPaymentId().toString());
             System.out.println("Payment Status: " + paymentResult.getStatus());

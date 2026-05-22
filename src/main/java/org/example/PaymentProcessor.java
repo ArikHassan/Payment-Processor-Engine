@@ -64,13 +64,13 @@ public class PaymentProcessor {
 
     // This method accepts a customers' payment + acquires correct processor + tells processor to process payment
     // + returns the result from processor
-    public PaymentResult process(Payment payment){
+    public PaymentResult process(PaymentRequest paymentRequest){
 
         //GET THE APPROPRIATE PROCESSOR TO USE
-        Processor processor = helper.getProcessor(payment.getPaymentType(), bankService);
+        Processor processor = helper.getProcessor(paymentRequest.getPaymentType(), bankService);
 
         //PASS PAYMENT TO PROCESSOR FOR PROCESSING
-        PaymentResult result = processor.processPayment(payment);
+        PaymentResult result = processor.processPayment(paymentRequest);
 
         // Return the result from processor
         return result;
