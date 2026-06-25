@@ -1,3 +1,13 @@
+/*
+-This class contains a map of Customer ID: Bank Account
+-Gets sent payment requests and returns a PaymentResult
+
+Functions:
+    authorizeDebit
+    authorizeCredit
+    authorizeApplePay
+ */
+
 package org.example;
 
 import java.sql.SQLOutput;
@@ -8,7 +18,7 @@ import java.util.UUID;
 
 public class BankService {
 
-    // HashMap of customers with bank accounts
+    // HashMap of customer ID : Bank account
     // HashMap used here for fast lookup & because order not important
     private Map<UUID, BankAccount> accounts = new HashMap<>();
 
@@ -19,7 +29,7 @@ public class BankService {
         }
     }
 
-    public PaymentResult authoriseDebit(PaymentRequest paymentRequest){
+    public PaymentResult authoriseDebit(Payment payment){
 
         /*
         // Get account where Customer id matches account holders id
@@ -43,16 +53,16 @@ public class BankService {
         account.debit(payment.getAmount());
 */
         // Return successful payment result
-        return new PaymentResult(paymentRequest.getId(), PaymentStatus.SUCCESS, "Payment is authorised");
+        return new PaymentResult(payment.getCustomerId(), PaymentStatus.SUCCESS, "Payment is authorised");
     }
 
-    public PaymentResult authoriseCredit(PaymentRequest payment){
+    public PaymentResult authoriseCredit(Payment payment){
 // TEMP RETURN statement
         return new PaymentResult(payment.getId(), PaymentStatus.SUCCESS, "Payment is authorised");
     }
 
-    public PaymentResult authoriseApplePay(PaymentRequest paymentRequest){
+    public PaymentResult authoriseApplePay(Payment payment){
 // TEMP RETURN statement
-        return new PaymentResult(paymentRequest.getId(), PaymentStatus.SUCCESS, "Payment is authorised");
+        return new PaymentResult(payment.getId(), PaymentStatus.SUCCESS, "Payment is authorised");
     }
 }

@@ -1,6 +1,10 @@
 package org.example;
 
+import java.util.UUID;
+
 public class CardDetails {
+    UUID customerId; // used to link customer : card token
+
     String cardNumber;
     int expiryMonth;
     int expiryYear;
@@ -10,7 +14,7 @@ public class CardDetails {
     String cardNetwork;
 
     // CONSTRUCTOR
-    CardDetails(String cardNumber, int expiryMonth, int expiryYear, String securityCode, String cardholderName, String cardNetwork){
+    CardDetails(UUID customerId, String cardNumber, int expiryMonth, int expiryYear, String securityCode, String cardholderName, String cardNetwork){
         this.cardNumber =  cardNumber;
         this.expiryMonth = expiryMonth;
         this.expiryYear = expiryYear;

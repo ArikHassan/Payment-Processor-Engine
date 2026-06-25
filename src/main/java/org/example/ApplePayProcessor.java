@@ -9,11 +9,11 @@ public class ApplePayProcessor implements Processor {
     }
 
     // Implementation of the interface's abstract method
-    public PaymentResult processPayment(PaymentRequest paymentRequest){
+    public PaymentResult processPayment(Payment payment){
         System.out.println("PROCESSING APPLE PAY PAYMENT...");
 
         // Get authorization from bank service
-        PaymentResult paymentResult = bankService.authoriseApplePay(paymentRequest);
+        PaymentResult paymentResult = bankService.authoriseApplePay(payment);
 
         return paymentResult;
     }

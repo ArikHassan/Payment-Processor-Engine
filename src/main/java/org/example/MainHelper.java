@@ -1,21 +1,16 @@
+/*
+Functions:
+    displayStart()
+    displayMenu()
+    getMenuChoice()
+    getProcessor()
+*/
+
 package org.example;
 
 import java.util.Scanner;
 
 public class MainHelper {
-
-    public void displayStart(){
-        System.out.println("Starting Payment Processor Engine...");
-        System.out.println("************************************");
-        System.out.println();
-    }
-
-    public void displayMenu(){
-        System.out.println("************************");
-        System.out.println("Payment Processor Engine");
-        System.out.println("************************");
-        System.out.println();
-    }
 
     // BUILDS THE APPROPRIATE PROCESSOR BASED ON PAYMENT TYPE & RETURNS IT
     public Processor getProcessor(PaymentType paymentType, BankService bankService){

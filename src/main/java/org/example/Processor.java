@@ -1,5 +1,5 @@
 package org.example;
 
 public interface Processor {
-    PaymentResult processPayment(PaymentRequest paymentRequest);
+    PaymentResult processPayment(Payment payment);
 }

@@ -11,7 +11,7 @@ public class TestDataSource {
     public List<Address> addresses = new ArrayList<>();
 
     // LIST OF PAYMENTS TO PROCESS
-    public List<PaymentRequest> paymentRequests = new ArrayList<>();
+    public List<Payment> payments = new ArrayList<>();
 
     // LIST OF RAW CARD DATA
     public List<CardDetails> cards = new ArrayList<>();
@@ -54,34 +54,34 @@ public class TestDataSource {
         }
 
         // 10 Sample Payments
-        PaymentRequest[] paymentsRequests = {
-                new PaymentRequest(120.00, Currency.CAD, PaymentType.CREDIT),
-                new PaymentRequest(75.50, Currency.CAD, PaymentType.DEBIT),
-                new PaymentRequest(240.99, Currency.CAD, PaymentType.CREDIT),
-                new PaymentRequest(19.99, Currency.CAD, PaymentType.APPLEPAY),
-                new PaymentRequest(560.00, Currency.CAD, PaymentType.CREDIT),
-                new PaymentRequest(89.25, Currency.CAD, PaymentType.DEBIT),
-                new PaymentRequest(1500.00, Currency.CAD, PaymentType.CREDIT),
-                new PaymentRequest(45.00, Currency.CAD, PaymentType.APPLEPAY),
-                new PaymentRequest(310.75, Currency.CAD, PaymentType.DEBIT),
-                new PaymentRequest(999.99, Currency.CAD, PaymentType.CREDIT)
+        Payment[] payments = {
+                new Payment(120.00, customers[0], Currency.CAD, PaymentType.CREDIT),
+                new Payment(75.50, customers[1], Currency.CAD, PaymentType.DEBIT),
+                new Payment(240.99, customers[2], Currency.CAD, PaymentType.CREDIT),
+                new Payment(19.99, customers[3], Currency.CAD, PaymentType.APPLEPAY),
+                new Payment(560.00, customers[4], Currency.CAD, PaymentType.CREDIT),
+                new Payment(89.25, customers[5], Currency.CAD, PaymentType.DEBIT),
+                new Payment(1500.00, customers[6], Currency.CAD, PaymentType.CREDIT),
+                new Payment(45.00, customers[7], Currency.CAD, PaymentType.APPLEPAY),
+                new Payment(310.75, customers[8], Currency.CAD, PaymentType.DEBIT),
+                new Payment(999.99, customers[9], Currency.CAD, PaymentType.CREDIT)
         };
 
-        for (PaymentRequest paymentRequest : paymentsRequests) {
-            this.paymentRequests.add(paymentRequest);
+        for (Payment payment : payments) {
+            this.payments.add(payment);
         }
 
         CardDetails[] cards = {
-                new CardDetails("4111 1111 1111 1001", 12, 2028, "123", "Marty Bird", "VISA"),
-                new CardDetails("5500 0000 0000 2002", 11, 2027, "456", "Sarah Ahmed", "MASTERCARD"),
-                new CardDetails("4111 1111 1111 3003", 10, 2029, "789", "Daniel Chen", "VISA"),
-                new CardDetails("3400 0000 0000 400", 9, 2026, "321", "Ayesha Khan", "AMEX"),
-                new CardDetails("5500 0000 0000 5005", 8, 2028, "654", "Michael Thompson", "MASTERCARD"),
-                new CardDetails("4111 1111 1111 6006", 7, 2027, "987", "Fatima Ali", "VISA"),
-                new CardDetails("5500 0000 0000 7007", 6, 2029, "111", "James Wilson", "MASTERCARD"),
-                new CardDetails("4111 1111 1111 8008", 5, 2026, "222", "Omar Hassan", "VISA"),
-                new CardDetails("3400 0000 0000 900", 4, 2028, "333", "Emily Carter", "AMEX"),
-                new CardDetails("5500 0000 0000 1010", 3, 2027, "444", "Noah Patel", "MASTERCARD")
+                new CardDetails(customers[0].getId(), "4111 1111 1111 1001", 12, 2028, "123", "Marty Bird", "VISA"),
+                new CardDetails(customers[1].getId(),"5500 0000 0000 2002", 11, 2027, "456", "Sarah Ahmed", "MASTERCARD"),
+                new CardDetails(customers[2].getId(),"4111 1111 1111 3003", 10, 2029, "789", "Daniel Chen", "VISA"),
+                new CardDetails(customers[3].getId(),"3400 0000 0000 400", 9, 2026, "321", "Ayesha Khan", "AMEX"),
+                new CardDetails(customers[4].getId(),"5500 0000 0000 5005", 8, 2028, "654", "Michael Thompson", "MASTERCARD"),
+                new CardDetails(customers[5].getId(),"4111 1111 1111 6006", 7, 2027, "987", "Fatima Ali", "VISA"),
+                new CardDetails(customers[6].getId(),"5500 0000 0000 7007", 6, 2029, "111", "James Wilson", "MASTERCARD"),
+                new CardDetails(customers[7].getId(),"4111 1111 1111 8008", 5, 2026, "222", "Omar Hassan", "VISA"),
+                new CardDetails(customers[8].getId(),"3400 0000 0000 900", 4, 2028, "333", "Emily Carter", "AMEX"),
+                new CardDetails(customers[9].getId(),"5500 0000 0000 1010", 3, 2027, "444", "Noah Patel", "MASTERCARD")
 
         };
 
@@ -100,8 +100,8 @@ public class TestDataSource {
         return this.customers;
     }
 
-    public List<PaymentRequest> getPayments(){
-        return this.paymentRequests;
+    public List<Payment> getPayments(){
+        return this.payments;
     }
     /*--------------------------------------*/
 
